@@ -3,7 +3,6 @@ terraform {
     bucket         = "mybucketnewtestingfirst01" 
     key            = "aws-infra/terraform.tfstate" 
     region         = "us-east-1"                    
-    dynamodb_table = "my-terraform-lock-table-akhi"         
     encrypt        = true
   }
 

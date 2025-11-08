@@ -29,16 +29,29 @@ variable "vpc_tags" {
 
 # Subnet Variables
 
-variable "subnet_cidr_block" {
+variable "subnet_cidr_block1" {
   type = string
   description = "Subnet CIDR Block"
   default = "10.0.1.0/24"
 }
 
-variable "subnet_availability_zone" {
+variable "subnet_cidr_block2" {
+  type = string
+  description = "Subnet CIDR Block"
+  default = "10.0.2.0/24"
+}
+
+
+variable "subnet_availability_zone1" {
   type = string
   description = "Subnet Availability Zone"
   default = "us-east-1a"
+}
+
+variable "subnet_availability_zone2" {
+  type = string
+  description = "Subnet Availability Zone"
+  default = "us-east-1b"
 }
 
 variable "subnet_tags" {
@@ -53,7 +66,6 @@ variable "subnet_tags" {
 
 variable "route_table_tags" {
   type = map(string)
-  description = "Route Table Tags"
   default = {
     Name = "my-rt"
   }
@@ -61,14 +73,13 @@ variable "route_table_tags" {
 
 variable "route_table_route" {
   type = list(map(string))
-  description = "Route Table Routes"
   default = [
     {
       cidr_block = "0.0.0.0/0"
-      gateway_id = "igw-0c55b159cbfafe1f0"
     }
   ]
 }
+
 
 # Internet Gateway Variables
 
@@ -96,7 +107,7 @@ variable "security_group_tags" {
 variable "launch_template_keypair_name" {
   type = string
   description = "Key Pair for EC2 Instance"
-  default = "harsha_key_pair"
+  default = "harsha_keypair"
 }
 
 variable "launch_template_description" {
@@ -108,7 +119,7 @@ variable "launch_template_description" {
 variable "launch_template_image_id" {
   type = string
   description = "Launch Template Image ID"
-  default = "ami-0c55b159cbfafe1f0"
+  default = "ami-0157af9aea2eef346"
 }
 
 variable "launch_template_instance_type" {
