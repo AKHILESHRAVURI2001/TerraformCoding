@@ -127,4 +127,3 @@
 | 🧩 Provider       | `provider.tf`                                                                      | Connects Terraform to AWS (Where Terraform Connects)                  |
 | 📦 Backend        | `backend.tf`                                                                           | Defines *where* Terraform stores state |
 | 📦 Backend Config | `backend-config.tf`                                                                    | Supplies *parameters* (like bucket, region) to backend | CLI or `.hcl` file |
-
